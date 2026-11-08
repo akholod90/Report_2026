@@ -44,7 +44,7 @@ body{
   page-break-inside:avoid;
 }
 
-/* Лента-флаг РФ в верхней части каждого слайда */
+/* Лента-флаг РФ */
 .flag{
   flex:0 0 8px;
   height:8px;
@@ -61,7 +61,7 @@ body{
   gap:10px;
 }
 
-/* ================= СЛУЖЕБНАЯ ШАПКА ================= */
+/* Служебная шапка */
 .slide-head{
   flex:0 0 auto;
   display:flex;
@@ -77,7 +77,7 @@ body{
 .head-tag::before{content:"";width:20px;height:2px;border-radius:2px;background:#C8102E;}
 .head-num b{color:#0A3D91;font-weight:800;}
 
-/* ================= ТЕЛО СЛАЙДА ================= */
+/* Тело */
 .body{
   flex:1 1 auto;
   min-height:0;
@@ -93,7 +93,6 @@ body{
   justify-content:space-between;
   gap:24px;
 }
-
 .kicker{
   display:inline-flex;
   align-items:center;
@@ -132,7 +131,7 @@ body{
   white-space:nowrap;
 }
 
-/* ================= ОБЩИЕ КОМПОНЕНТЫ ================= */
+/* Общие компоненты */
 .card{
   background:#FFFFFF;
   border:1px solid #EDF0F5;
@@ -141,7 +140,6 @@ body{
   padding:14px 18px;
   min-height:0;
 }
-
 .ph-wrap{
   position:relative;
   overflow:hidden;
@@ -156,7 +154,6 @@ body{
   object-fit:cover;
   object-position:center top;
 }
-
 .card-title{
   font-size:10.5px;
   font-weight:800;
@@ -165,8 +162,6 @@ body{
   color:#0A3D91;
   margin-bottom:10px;
 }
-
-/* Список с «галочками» */
 .ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
 .ticks li{
   position:relative;
@@ -178,17 +173,15 @@ body{
 .ticks li::before{
   content:"";
   position:absolute;
-  left:0;
-  top:4px;
-  width:10px;
-  height:5px;
+  left:0;top:4px;
+  width:10px;height:5px;
   border-left:2px solid #1E4FD8;
   border-bottom:2px solid #1E4FD8;
   transform:rotate(-45deg);
   border-radius:1px;
 }
 
-/* ================= ПОДВАЛ ================= */
+/* Подвал */
 .slide-foot{
   flex:0 0 auto;
   display:flex;
@@ -207,7 +200,7 @@ body{
   color:#0A3D91;
 }
 
-/* ================= СЛАЙД 1 · ТИТУЛ ================= */
+/* ===== СЛАЙД 1 · ТИТУЛ ===== */
 .title-grid{
   display:grid;
   grid-template-columns:1.02fr .98fr;
@@ -217,7 +210,6 @@ body{
 }
 .title-left{display:flex;flex-direction:column;align-items:flex-start;min-height:0;}
 .party-logo{width:90px;height:85px;object-fit:contain;margin-bottom:18px;}
-
 .title-h1{
   margin:6px 0 12px;
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
@@ -228,13 +220,7 @@ body{
   text-transform:uppercase;
   color:#101828;
 }
-.title-sub{
-  max-width:520px;
-  margin:0 0 16px;
-  font-size:12.5px;
-  line-height:1.5;
-  color:#5B6474;
-}
+.title-sub{max-width:520px;margin:0 0 16px;font-size:12.5px;line-height:1.5;color:#5B6474;}
 .title-name{
   margin:0 0 18px;
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
@@ -244,16 +230,7 @@ body{
   letter-spacing:-.01em;
   color:#0A3D91;
 }
-.slogan{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  margin:0;
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:.01em;
-  color:#C8102E;
-}
+.slogan{display:flex;align-items:center;gap:11px;margin:0;font-size:15px;font-weight:700;color:#C8102E;}
 .slogan::before{content:"";width:34px;height:3px;border-radius:2px;background:#C8102E;}
 
 .map-card{
@@ -270,416 +247,195 @@ body{
 }
 .map-card img{width:100%;height:100%;object-fit:contain;display:block;}
 
-/* ================= СЛАЙД 2 · ОБРАЩЕНИЕ ================= */
-.intro-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1fr .96fr;
-  gap:16px;
-}
-.intro-card{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:24px 26px;
-  border-left:4px solid #1E4FD8;
-}
+/* ===== СЛАЙД 2 · ОБРАЩЕНИЕ ===== */
+.intro-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr .96fr;gap:16px;}
+.intro-card{display:flex;flex-direction:column;justify-content:center;padding:24px 26px;border-left:4px solid #1E4FD8;}
 .intro-lead{
   margin:0 0 10px;
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.02em;
-  color:#0A3D91;
+  font-size:13px;font-weight:700;letter-spacing:.02em;color:#0A3D91;
 }
-.intro-card p{
-  margin:0 0 12px;
-  font-size:13.5px;
-  line-height:1.62;
-  color:#2B3340;
-}
-.intro-sign{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  margin:6px 0 0 !important;
-  font-size:11.5px !important;
-  font-weight:700;
-  color:#8A93A3 !important;
-}
+.intro-card p{margin:0 0 12px;font-size:13.5px;line-height:1.62;color:#2B3340;}
+.intro-sign{display:flex;align-items:center;gap:9px;margin:6px 0 0 !important;font-size:11.5px !important;font-weight:700;color:#8A93A3 !important;}
 .intro-sign::before{content:"";width:20px;height:2px;border-radius:2px;background:#C8102E;}
-
 .intro-photos{display:flex;flex-direction:column;gap:12px;min-height:0;}
 .intro-photos .big{flex:1.28 1 0;min-height:0;}
-.intro-photos .ph-row{
-  flex:1 1 0;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
+.intro-photos .ph-row{flex:1 1 0;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 
-/* ================= СЛАЙД 3 · БИОГРАФИЯ ================= */
-.bio-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:210px 1fr 1.06fr;
-  gap:16px;
-}
+/* ===== СЛАЙД 3 · БИОГРАФИЯ ===== */
+.bio-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:210px 1fr 1.06fr;gap:16px;}
 .photo-only{padding:8px;display:flex;}
 .photo-only img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:12px;display:block;}
-
 .bio-card{display:flex;flex-direction:column;padding:18px 20px;}
-.bio-eyebrow{
-  margin-bottom:6px;
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:#8A93A3;
-}
+.bio-eyebrow{margin-bottom:6px;font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#8A93A3;}
 .bio-name{
   margin:0 0 6px;
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:15px;
-  font-weight:800;
-  line-height:1.2;
-  text-transform:uppercase;
-  color:#101828;
+  font-size:15px;font-weight:800;line-height:1.2;text-transform:uppercase;color:#101828;
 }
 .bio-name .accent{color:#0A3D91;}
-.bio-date{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  margin-bottom:8px;
-  font-size:11px;
-  font-weight:700;
-  color:#C8102E;
-}
+.bio-date{display:flex;align-items:center;gap:7px;margin-bottom:8px;font-size:11px;font-weight:700;color:#C8102E;}
 .bio-date::before{content:"";width:6px;height:6px;border-radius:50%;background:#C8102E;}
-
 .bio-list{list-style:none;margin:0;padding:0;}
 .bio-list li{
   position:relative;
   padding:5px 0 5px 14px;
   border-top:1px solid #EEF1F6;
-  font-size:11px;
-  line-height:1.36;
-  color:#333B49;
+  font-size:11px;line-height:1.36;color:#333B49;
 }
 .bio-list li:first-child{border-top:none;}
-.bio-list li::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:11px;
-  width:5px;height:5px;
-  border-radius:50%;
-  background:#1E4FD8;
-}
+.bio-list li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:#1E4FD8;}
 
-/* ================= СЛАЙД 4 · РЕЙТИНГ ТЕМ ================= */
-.rating-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1.55fr .62fr;
-  gap:16px;
-}
+/* ===== СЛАЙД 4 · РЕЙТИНГ ===== */
+.rating-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1.55fr .62fr;gap:16px;}
 .chart-card{display:flex;flex-direction:column;justify-content:center;padding:10px 26px;}
 .chart{display:flex;flex-direction:column;gap:18px;}
-.chart-row{
-  display:grid;
-  grid-template-columns:170px 1fr 58px;
-  align-items:center;
-  gap:16px;
-}
+.chart-row{display:grid;grid-template-columns:170px 1fr 58px;align-items:center;gap:16px;}
 .chart-label{font-size:12px;font-weight:600;color:#2B3340;line-height:1.2;}
 .chart-track{height:22px;border-radius:11px;background:#EEF1F6;overflow:hidden;}
 .chart-fill{height:100%;border-radius:11px;background:linear-gradient(90deg,#0A3D91,#1E4FD8);}
 .chart-fill.top{background:linear-gradient(90deg,#A50D26,#C8102E);}
 .chart-val{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:15px;
-  font-weight:800;
-  text-align:right;
-  color:#0A3D91;
+  font-size:15px;font-weight:800;text-align:right;color:#0A3D91;
 }
 .chart-val.top{color:#C8102E;}
-
-.total-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  text-align:center;
-  padding:18px;
-}
+.total-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;}
 .total-num{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:64px;
-  font-weight:800;
-  line-height:1;
-  color:#0A3D91;
+  font-size:64px;font-weight:800;line-height:1;color:#0A3D91;
 }
 .total-card .cap{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A93A3;}
 .total-card .note{font-size:11px;line-height:1.4;color:#5B6474;}
 
-/* ================= СЛАЙД 5 · ЦИФРЫ ================= */
+/* ===== СЛАЙД 5 · ЦИФРЫ ===== */
 .stats-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-template-rows:1fr 1fr;
-  gap:14px;
+  flex:1 1 auto;min-height:0;
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px;
 }
-.stat{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:9px;
-  padding:18px 22px;
-}
+.stat{display:flex;flex-direction:column;justify-content:center;gap:9px;padding:18px 22px;}
 .stat b{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:40px;
-  font-weight:800;
-  line-height:1;
-  color:#0A3D91;
+  font-size:40px;font-weight:800;line-height:1;color:#0A3D91;
 }
 .stat span{font-size:11.5px;line-height:1.35;color:#5B6474;}
 
-/* ================= СЛАЙДЫ 6–8 · БЛАГОУСТРОЙСТВО ================= */
+/* ===== СЛАЙДЫ 6–8 · БЛАГОУСТРОЙСТВО ===== */
 .note-line{
   flex:0 0 auto;
   padding:9px 16px;
   border-radius:12px;
   border:1px solid #E3E7EE;
   background:rgba(255,255,255,.7);
-  font-size:10.5px;
-  line-height:1.4;
-  color:#5B6474;
+  font-size:10.5px;line-height:1.4;color:#5B6474;
 }
 .note-line b{color:#0A3D91;font-weight:800;}
-
 .photo-stack{display:flex;flex-direction:column;gap:10px;height:100%;min-height:0;}
 .photo-stack .ph-wrap{flex:1 1 0;min-height:0;}
-
 .photo-card{padding:10px;display:flex;flex-direction:column;gap:8px;min-height:0;}
 .photo-card .caption{font-size:10.5px;line-height:1.35;color:#5B6474;}
-
-.split-2{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1.12fr .88fr;
-  gap:16px;
-}
+.split-2{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1.12fr .88fr;gap:16px;}
 .split-2.rev{grid-template-columns:.88fr 1.12fr;}
-
 .bullet-card{display:flex;flex-direction:column;justify-content:center;padding:18px 22px;}
-
-/* Дорожная инфраструктура */
-.road-photos{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  gap:12px;
-  min-height:0;
-}
+.road-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;min-height:0;}
 .money-card{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:20px 22px;}
 .money-num{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:34px;
-  font-weight:800;
-  line-height:1;
-  color:#0A3D91;
+  font-size:34px;font-weight:800;line-height:1;color:#0A3D91;
 }
 .money-cap{font-size:11px;line-height:1.4;color:#5B6474;}
-
-/* Безопасность */
 .vert-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:0;}
 .vert-photos .ph-wrap{min-height:0;}
 
-/* ================= СЛАЙД 9 · МЕРОПРИЯТИЯ ================= */
-.events-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
+/* ===== СЛАЙД 9 · МЕРОПРИЯТИЯ ===== */
+.events-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .event{display:flex;flex-direction:column;gap:10px;min-height:0;}
 .event .ph-wrap{flex:1 1 0;min-height:0;border-radius:14px;box-shadow:0 6px 22px rgba(16,29,54,.09);}
-.event .label{
-  padding-left:2px;
-  font-size:11.5px;
-  font-weight:700;
-  line-height:1.28;
-  color:#101828;
-}
+.event .label{padding-left:2px;font-size:11.5px;font-weight:700;line-height:1.28;color:#101828;}
 
-/* ================= СЛАЙД 10 · МОЛОДЁЖЬ ================= */
+/* ===== СЛАЙД 10 · МОЛОДЁЖЬ ===== */
 .youth-wrap{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;gap:12px;}
 .youth-text{padding:16px 22px;border-left:4px solid #1E4FD8;}
 .youth-text p{margin:0;font-size:12px;line-height:1.55;color:#2B3340;}
-
-.youth-photos{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
+.youth-photos{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .figure{display:flex;flex-direction:column;gap:8px;min-height:0;}
 .figure .ph-wrap{flex:1 1 0;min-height:0;border-radius:14px;box-shadow:0 6px 22px rgba(16,29,54,.09);}
 .fig-cap{font-size:10px;line-height:1.3;color:#5B6474;}
 
-/* ================= СЛАЙДЫ 11–12 · НАКАЗЫ ================= */
-.nakaz-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
+/* ===== СЛАЙДЫ 11–12 · НАКАЗЫ ===== */
+.nakaz-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 .nakaz{display:flex;flex-direction:column;gap:10px;min-height:0;}
 .nakaz .ph-wrap{flex:1 1 0;min-height:0;border-radius:14px;box-shadow:0 6px 22px rgba(16,29,54,.09);}
 .nakaz-text{
-  display:flex;
-  gap:10px;
+  display:flex;gap:10px;
   padding:10px 12px;
   border-radius:12px;
-  background:#FFFFFF;
-  border:1px solid #EDF0F5;
-  font-size:10.5px;
-  line-height:1.34;
-  color:#2B3340;
+  background:#FFFFFF;border:1px solid #EDF0F5;
+  font-size:10.5px;line-height:1.34;color:#2B3340;
 }
 .nakaz-num{
   flex:0 0 auto;
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:13px;
-  font-weight:800;
-  line-height:1.3;
-  color:#C8102E;
+  font-size:13px;font-weight:800;line-height:1.3;color:#C8102E;
 }
 
-/* ================= СЛАЙД 13 · ИНИЦИАТИВЫ ================= */
+/* ===== СЛАЙД 13 · ИНИЦИАТИВЫ ===== */
 .init-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-auto-rows:1fr;
-  gap:12px;
+  flex:1 1 auto;min-height:0;
+  display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px;
 }
-.init{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:6px;
-  padding:12px 18px;
-  border-left:4px solid #1E4FD8;
-}
+.init{display:flex;flex-direction:column;justify-content:center;gap:6px;padding:12px 18px;border-left:4px solid #1E4FD8;}
 .init-name{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:13px;
-  font-weight:700;
-  line-height:1.2;
-  color:#0A3D91;
+  font-size:13px;font-weight:700;line-height:1.2;color:#0A3D91;
 }
 .init-desc{font-size:11px;line-height:1.38;color:#2B3340;}
 .init:nth-child(5){grid-column:1 / -1;}
 
-/* ================= СЛАЙД 14 · КОМИССИЯ ================= */
-.comm-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1.02fr .98fr;
-  gap:16px;
-}
+/* ===== СЛАЙД 14 · КОМИССИЯ ===== */
+.comm-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1.02fr .98fr;gap:16px;}
 .comm-text{display:flex;flex-direction:column;justify-content:center;padding:22px 26px;border-left:4px solid #C8102E;}
 .comm-text p{margin:0 0 12px;font-size:12.5px;line-height:1.6;color:#2B3340;}
 .comm-text p:last-child{margin-bottom:0;}
 
-/* ================= СЛАЙД 15 · АССОЦИАЦИЯ ================= */
+/* ===== СЛАЙД 15 · АССОЦИАЦИЯ ===== */
 .assoc-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-template-rows:1fr 1fr;
-  gap:12px;
+  flex:1 1 auto;min-height:0;
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:12px;
 }
-.assoc{display:flex;flex-direction:column;justify-content:center;gap:7px;padding:14px 16px;}
+.assoc{display:flex;flex-direction:column;justify-content:center;gap:7px;padding:12px 16px;}
 .assoc b{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:26px;
-  font-weight:800;
-  line-height:1;
-  color:#0A3D91;
+  font-size:26px;font-weight:800;line-height:1;color:#0A3D91;
 }
 .assoc span{font-size:10px;line-height:1.32;color:#5B6474;}
+.assoc.summary{background:linear-gradient(160deg,#0A3D91,#1E4FD8);border-color:#0A3D91;}
+.assoc.summary b{color:#FFFFFF;font-size:15px;line-height:1.28;}
+.assoc.summary span{color:rgba(255,255,255,.78);}
 
-/* ================= СЛАЙД 16 · ПРОЕКТЫ ================= */
-.proj-grid{
-  flex:1 1 auto;
-  min-height:0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  gap:14px;
-}
+/* ===== СЛАЙД 16 · ПРОЕКТЫ ===== */
+.proj-grid{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;}
 .proj{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:18px 22px;}
 .proj-title{
   font-family:'Unbounded','Montserrat',system-ui,sans-serif;
-  font-size:13px;
-  font-weight:700;
-  line-height:1.22;
-  color:#0A3D91;
+  font-size:13px;font-weight:700;line-height:1.22;color:#0A3D91;
 }
 .proj-desc{font-size:11.5px;line-height:1.42;color:#2B3340;}
 
-/* ================= ПЕЧАТЬ ================= */
+/* ===== ПЕЧАТЬ ===== */
 @media print{
   @page{size:338.7mm 190.5mm;margin:0;}
-
   html,body{
-    width:338.7mm;
-    margin:0;
-    padding:0;
-    background:#FFFFFF;
-    display:block;
-    overflow:visible;
-    -webkit-print-color-adjust:exact;
-    print-color-adjust:exact;
+    width:338.7mm;margin:0;padding:0;background:#FFFFFF;display:block;overflow:visible;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
   }
-
   .slide{
-    width:338.7mm;
-    height:190.5mm;
-    margin:0;
-    border-radius:0;
-    box-shadow:none;
-    page-break-after:always;
-    break-after:page;
-    page-break-inside:avoid;
-    break-inside:avoid;
+    width:338.7mm;height:190.5mm;margin:0;border-radius:0;box-shadow:none;
+    page-break-after:always;break-after:page;
+    page-break-inside:avoid;break-inside:avoid;
   }
   .slide:last-child{page-break-after:auto;break-after:auto;}
-
-  .card,
-  .event .ph-wrap,
-  .figure .ph-wrap,
-  .nakaz .ph-wrap,
-  .map-card{box-shadow:none;}
+  .card,.event .ph-wrap,.figure .ph-wrap,.nakaz .ph-wrap,.map-card{box-shadow:none;}
 }
 </style>
 </head>
@@ -699,6 +455,7 @@ body{
     <section class="body">
       <div class="title-grid">
         <div class="title-left">
+          <!-- Если логотип не .png — поменяйте расширение -->
           <img class="party-logo" src="ЕР_Лого.png" alt="Логотип партии «Единая Россия»">
           <div class="kicker">Отчёт депутата · 2026 год</div>
           <h1 class="title-h1">Отчёт за 2026 год</h1>
@@ -712,7 +469,7 @@ body{
 
         <div class="title-right">
           <div class="map-card">
-            <img src="Схема_округа.jpg" alt="Схема избирательного округа № 5">
+            <img src="Схема_округа.png" alt="Схема избирательного округа № 5">
           </div>
         </div>
       </div>
@@ -935,7 +692,7 @@ body{
 </main>
 
 <!-- ============================================================
-     СЛАЙД 06 · БЛАГОУСТРОЙСТВО · ИНФРАСТРУКТУРА ДЛЯ ДЕТЕЙ
+     СЛАЙД 06 · ИНФРАСТРУКТУРА ДЛЯ ДЕТЕЙ
      ============================================================ -->
 <main class="slide">
   <div class="flag" aria-hidden="true"></div>
@@ -1014,7 +771,8 @@ body{
           <div class="ph-wrap"><img class="ph" src="Тротуар.jpg" alt="Новый тротуар по ул. М. Жукова"></div>
           <div class="ph-wrap"><img class="ph" src="М. Жукова_24.jpg" alt="Ремонт проезжей части по ул. Маршала Жукова, 24"></div>
           <div class="ph-wrap"><img class="ph" src="Аллея.jpg" alt="Пешеходная дорога вдоль домов № 12 по ул. М. Жукова и № 1 по ул. Фрунзе"></div>
-          <div class="ph-wrap"><img class="ph" src="Карман_Степана_Разина.jpg" alt="Дорожное покрытие от ул. Спортивной до ул. Фрунзе"></div>
+          <!-- Имя файла с пробелом — как в исходнике -->
+          <div class="ph-wrap"><img class="ph" src="Карман_Степана Разина.jpg" alt="Дорожное покрытие от ул. Спортивной до ул. Фрунзе"></div>
         </div>
 
         <div class="card money-card">
@@ -1277,7 +1035,8 @@ body{
         </div>
 
         <div class="nakaz">
-          <div class="ph-wrap"><img class="ph" src="Восстановленная_площадка.jpg" alt="Восстановленная детская площадка возле дома № 71"></div>
+          <!-- Имя файла с пробелом — как в исходнике -->
+          <div class="ph-wrap"><img class="ph" src="Восстановленная площадка.jpg" alt="Восстановленная детская площадка возле дома № 71"></div>
           <div class="nakaz-text">
             <span class="nakaz-num">06</span>
             <span>Восстановлено благоустройство детской площадки возле дома № 71 по пр. Степана Разина после сноса аварийных конструкций</span>
@@ -1350,4 +1109,153 @@ body{
 <!-- ============================================================
      СЛАЙД 14 · ПОСТОЯННАЯ КОМИССИЯ
      ============================================================ -->
-<
+<main class="slide">
+  <div class="flag" aria-hidden="true"></div>
+  <div class="slide-inner">
+    <header class="slide-head">
+      <span class="head-tag">Дума г.о. Тольятти · комиссия</span>
+      <span class="head-num"><b>14</b> / 16</span>
+    </header>
+
+    <section class="body">
+      <div class="title-row">
+        <div>
+          <div class="kicker">Депутатская деятельность</div>
+          <h2 class="slide-title sm">Постоянная комиссия по контролю,<br>общественной безопасности<br>и соблюдению депутатской этики</h2>
+        </div>
+        <div class="slogan-badge">Председатель комиссии</div>
+      </div>
+
+      <div class="comm-grid">
+        <div class="card comm-text">
+          <p>
+            <b>Роман Андреевич Дидковский</b> является председателем комиссии по контролю,
+            общественной безопасности и соблюдению депутатской этики.
+          </p>
+          <p>
+            Комиссия отвечает за большой блок вопросов, касающихся контроля за мероприятиями
+            по обеспечению общественной безопасности, обеспечением мер пожарной безопасности,
+            ликвидации последствий в случае возникновения ЧС и т.д., а также за соблюдением
+            депутатами Думы правил депутатской этики и законодательства.
+          </p>
+        </div>
+
+        <div class="card photo-only" style="padding:10px;">
+          <img src="Комиссия.jpg" alt="Заседание постоянной комиссии по контролю и общественной безопасности">
+        </div>
+      </div>
+    </section>
+
+    <footer class="slide-foot">
+      <span class="brand">Дидковский Р. А.</span>
+      <span>Отчёт о работе депутата · 5 округ · 2026</span>
+    </footer>
+  </div>
+</main>
+
+<!-- ============================================================
+     СЛАЙД 15 · АССОЦИАЦИЯ ВЕТЕРАНОВ СВО — ЦИФРЫ
+     ============================================================ -->
+<main class="slide">
+  <div class="flag" aria-hidden="true"></div>
+  <div class="slide-inner">
+    <header class="slide-head">
+      <span class="head-tag">СРОО «Возвращение» · Ассоциация ветеранов СВО</span>
+      <span class="head-num"><b>15</b> / 16</span>
+    </header>
+
+    <section class="body">
+      <div class="title-row">
+        <div>
+          <div class="kicker">Результаты работы · ноябрь 2026</div>
+          <h2 class="slide-title">Помощь ветеранам СВО и их семьям</h2>
+        </div>
+        <div class="slogan-badge">Первый заместитель председателя</div>
+      </div>
+
+      <div class="assoc-grid">
+        <div class="card assoc"><b>500+</b><span>отработанных адресных обращений</span></div>
+        <div class="card assoc"><b>400+</b><span>заявок на вступление в организацию</span></div>
+        <div class="card assoc"><b>400+</b><span>ветеранов СВО и членов их семей посетили Центр отдыха и реабилитации за сезон 2026 года</span></div>
+        <div class="card assoc"><b>100+</b><span>детей отдохнули в детском лагере «Живое детство»</span></div>
+        <div class="card assoc"><b>350+</b><span>«Уроков мужества» проведено в образовательных учреждениях региона</span></div>
+        <div class="card assoc"><b>10+</b><span>конвоев с гуманитарной помощью сопровождено и доставлено в зону проведения СВО</span></div>
+        <div class="card assoc"><b>12</b><span>спортивных турниров и соревнований муниципального, регионального и межрегионального уровня организовано</span></div>
+        <div class="card assoc"><b>40+</b><span>призовых мест заняли участники СРОО «Возвращение» на соревнованиях различного уровня</span></div>
+        <div class="card assoc summary">
+          <b>Работа продолжается</b>
+          <span>Роман Дидковский — первый заместитель председателя СРОО «Возвращение» и руководитель Ассоциации ветеранов СВО Самарской области</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="slide-foot">
+      <span class="brand">Дидковский Р. А.</span>
+      <span>Отчёт о работе депутата · 5 округ · 2026</span>
+    </footer>
+  </div>
+</main>
+
+<!-- ============================================================
+     СЛАЙД 16 · РЕАЛИЗОВАННЫЕ ПРОЕКТЫ 2026
+     ============================================================ -->
+<main class="slide">
+  <div class="flag" aria-hidden="true"></div>
+  <div class="slide-inner">
+    <header class="slide-head">
+      <span class="head-tag">СРОО «Возвращение» · проекты 2026</span>
+      <span class="head-num"><b>16</b> / 16</span>
+    </header>
+
+    <section class="body">
+      <div class="title-row">
+        <div>
+          <div class="kicker">Реализованные инициативы</div>
+          <h2 class="slide-title">Проекты 2026 года</h2>
+        </div>
+        <div class="slogan-badge">Президентские гранты · музеи · книги</div>
+      </div>
+
+      <div class="proj-grid">
+        <div class="card proj">
+          <div class="proj-title">«Вместе Победим»</div>
+          <div class="proj-desc">
+            Проект-победитель конкурса Фонда президентских грантов:
+            развитие следж-хоккея для ветеранов СВО в регионе.
+          </div>
+        </div>
+
+        <div class="card proj">
+          <div class="proj-title">«Возвращение к жизни: на Волге»</div>
+          <div class="proj-desc">
+            Реабилитация и вовлечение в здоровый образ жизни участников СВО и их семей
+            через занятия спортом в Центре отдыха и реабилитации «Возвращение» на Копылово.
+          </div>
+        </div>
+
+        <div class="card proj">
+          <div class="proj-title">Книга «Сердце воина.<br>Непридуманная история одной семьи»</div>
+          <div class="proj-desc">
+            Создание уникальной книги для семей участников СВО. Презентация и размещение
+            изданий в библиотеках муниципалитетов области.
+          </div>
+        </div>
+
+        <div class="card proj">
+          <div class="proj-title">Музей СВО в Самаре</div>
+          <div class="proj-desc">
+            Создание и открытие постоянной экспозиции музея СВО в Самаре.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="slide-foot">
+      <span class="brand">Дидковский Р. А.</span>
+      <span>Отчёт о работе депутата · 5 округ · 2026</span>
+    </footer>
+  </div>
+</main>
+
+</body>
+</html>
